@@ -1,0 +1,70 @@
+GET http://{{host}}/get?show_env={{show_env}}
+Accept: application/json
+
+###
+
+GET http://localhost/api/json/get?id=12345&key={{unresolved_var}}
+Authorization: Basic dev-user dev-password
+Content-Type: application/json
+
+{
+    "key": "my-dev-value"
+}
+
+###
+
+GET http://localhost/api/json/get?id=12345&key={{unresolved_var}}
+Authorization: Basic dev-user dev-password
+Content-Type: application/json
+
+{
+    "key": "my-dev-value"
+}
+
+###
+
+GET https://httpbin.org/ip
+Accept: application/json
+
+<> 2018-10-26T064202.200.json
+
+###
+
+GET https://httpbin.org/ip
+Accept: application/json
+
+<> 2018-10-26T063953.200.json
+
+###
+
+GET https://httpbin.org/get?show_env=1
+Accept: application/json
+
+<> 2018-10-26T063749.200.json
+
+###
+
+GET https://httpbin.org/get?show_env=1
+Accept: application/json
+
+<> 2018-10-26T063739.200.json
+
+###
+
+GET http://{{host}}/get?show_env={{show_env}}
+Accept: application/json
+
+###
+
+GET https://httpbin.org/get?show_env=1
+Accept: application/json
+
+<> 2018-10-26T063512.200.json
+
+###
+
+GET http://{{host}}/get?show_env={{show_env}}
+Accept: application/json
+
+###
+
